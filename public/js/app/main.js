@@ -1,11 +1,6 @@
 
 //Load Web App JavaScript Dependencies/Plugins
 define(
-    // "jquery",
-    // // "modernizr",
-    // "underscore",
-    // "backbone",
-    // "bootstrap"
  function(require)
 {
     var $=require('jquery');
@@ -14,8 +9,12 @@ define(
     var modernizr=require('modernizr');
     var bootstrap=require('bootstrap');
     var test=require('js/app/test.js');
+    var appView=require('js/app/views/appView.js');
     $(function()
     {
+        new appView({
+   
+        }).render();
         //do stuff
         console.log('required plugins loaded...');
 
