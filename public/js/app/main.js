@@ -13,7 +13,7 @@ define(
     $(function()
     {
         new appView({
-   
+            el:'#header'
         }).render();
         //do stuff
         console.log('required plugins loaded...');
