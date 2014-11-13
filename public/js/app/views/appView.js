@@ -7,12 +7,28 @@ var backbone=require('backbone');
 	return Backbone.View.extend({
 		className:'main',
 		initialize: function(){
+
+            this.model.save({}, {
+
+                url: '/post',
+
+                type: 'POST',
+
+                contentType: 'application/json',
+
+                success: _.bind(function() {
+                }, this),
+                error: _.bind(function(model, response) {
+
+                }, this),
+
+            })
 		},
 		render: function(){
-
+			
             var components = [];
             components.push(new header().render());
-            components.push(new content().render());
+            components.push(new content({model:this.model}).render());
 
            this.$el.empty().append(components);
 

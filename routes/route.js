@@ -3,7 +3,7 @@
 
 
 exports.findAll = function(req, res) {
-    res.type('json').status('200').send([{name:'wine1'}, {name:'wine2'}, {name:'wine4'}]);
+    res.type('json').status('200').send([{firsrname:'ram',lastName:'ram',age:'29'}, {firsrname:'ram',lastName:'N',age:'29'}, {firsrname:'ram',lastName:'ram',age:'29'}]);
 
    
 
